@@ -13,4 +13,6 @@ import javax.persistence.Entity;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Post {
+    
+    private Long postId;
 }
