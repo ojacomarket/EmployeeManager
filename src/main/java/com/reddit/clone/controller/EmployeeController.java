@@ -26,6 +26,6 @@ public class EmployeeController {
     }
     @PostMapping("/add")
     public ResponseEntity<Employee> addNewEmployee (@RequestBody Employee employeeJSON) {
-
+        Employee freshEmployee = employeeService.addNewEmployee(employeeJSON);
     }
 }
