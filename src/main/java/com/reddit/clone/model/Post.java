@@ -31,5 +31,5 @@ public class Post {
     @NotEmpty(message = "Email is required")
     private String email;
     private Instant created;
-
+    private boolean enabled;
 }
