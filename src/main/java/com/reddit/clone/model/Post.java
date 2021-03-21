@@ -11,6 +11,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
 
 @Data
 @Entity
@@ -26,6 +27,7 @@ public class Post {
     @NotBlank(message = "Password is required")
     private String password;
     @Email
+    @NotEmpty(message = "Email is required")
     private String email;
 
 }
