@@ -24,4 +24,7 @@ public class EmployeeService {
     public Employee updateEmployee (Employee employeeToBeUpdated) {
         return employeeRepository.save(employeeToBeUpdated);
     }
+    public void deleteEmployee (Long idOfEmployee) {
+        employeeRepository.deleteById(idOfEmployee);
+    }
 }
