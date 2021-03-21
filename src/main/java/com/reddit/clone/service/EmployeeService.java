@@ -21,4 +21,7 @@ public class EmployeeService {
     public List<Employee> findAllEmployees () {
         return employeeRepository.findAll();
     }
+    public Employee updateEmployee (Employee employeeToBeUpdated) {
+        return employeeRepository.save(employeeToBeUpdated);
+    }
 }
