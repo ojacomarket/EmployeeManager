@@ -5,10 +5,7 @@ import com.reddit.clone.service.EmployeeService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -26,5 +23,9 @@ public class EmployeeController {
     public ResponseEntity<Employee> getSingleEmployee(@PathVariable("id") Long id) {
         Employee singleEmployee = employeeService.findEmployeeById(id);
         return new ResponseEntity<Employee>(singleEmployee,HttpStatus.OK);
+    }
+    @PostMapping("/add")
+    public ResponseEntity<Employee> addNewEmployee (@RequestBody Employee employeeJSON) {
+
     }
 }
