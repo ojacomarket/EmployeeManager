@@ -7,3 +7,5 @@ spring:
       root
     password:
       1337228
+  jpa:
+    show-sql: true
