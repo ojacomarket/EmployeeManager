@@ -25,4 +25,5 @@ public class Post {
     @Nullable
     @Lob
     private String description;
+    private Integer voteCount;
 }
