@@ -1,5 +1,6 @@
 package com.reddit.clone.model;
 
+import com.sun.istack.Nullable;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -25,11 +26,6 @@ public class Post {
     private Long postId;
     @NotBlank(message = "Name is required")
     private String postName;
-    @NotBlank(message = "Password is required")
-    private String password;
-    @Email
-    @NotEmpty(message = "Email is required")
-    private String email;
-    private Instant created;
-    private boolean enabled;
+    @Nullable
+    private String url;
 }
