@@ -14,5 +14,7 @@ public class EmployeeService {
 
     public Employee addNewEmployee (Employee employeeToBeAddedIntoDb) {
         employeeToBeAddedIntoDb.setEmployeeCode(UUID.randomUUID().toString());
+        employeeRepository.save(employeeToBeAddedIntoDb);
+        return employeeToBeAddedIntoDb;
     }
 }
