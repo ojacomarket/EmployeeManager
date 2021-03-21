@@ -27,7 +27,11 @@ public class EmployeeController {
     @PostMapping("/add")
     public ResponseEntity<Employee> addNewEmployee (@RequestBody Employee employeeJSON) {
         Employee freshEmployee = employeeService.addNewEmployee(employeeJSON);
-        //Pay attention to HttpStatus, POST is always CREATED
         return new ResponseEntity<Employee>(freshEmployee, HttpStatus.CREATED);
     }
+    @PutMapping("/update")
+    public ResponseEntity<Employee> updateExistingEmployee (@RequestBody Employee employeeJSON) {
+       
+    }
+
 }
