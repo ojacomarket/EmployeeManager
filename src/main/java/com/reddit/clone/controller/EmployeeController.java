@@ -31,7 +31,7 @@ public class EmployeeController {
     }
     @PutMapping("/update")
     public ResponseEntity<Employee> updateExistingEmployee (@RequestBody Employee employeeJSON) {
-       
+        Employee existingEmployee = employeeService.updateEmployee(employeeJSON);
     }
 
 }
