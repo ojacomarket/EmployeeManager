@@ -34,5 +34,8 @@ public class EmployeeController {
         Employee existingEmployee = employeeService.updateEmployee(employeeJSON);
         return new ResponseEntity<Employee>(existingEmployee, HttpStatus.OK);
     }
+    @DeleteMapping("/delete/{id}")
+    public ResponseEntity<Employee> deleteExistingEmployee (@PathVariable("id") Long id) {
+    }
 
 }
