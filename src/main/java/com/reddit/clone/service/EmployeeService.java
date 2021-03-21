@@ -5,6 +5,7 @@ import com.reddit.clone.repository.EmployeeRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.UUID;
 
 @Service
@@ -16,5 +17,8 @@ public class EmployeeService {
         employeeToBeAddedIntoDb.setEmployeeCode(UUID.randomUUID().toString());
         employeeRepository.save(employeeToBeAddedIntoDb);
         return employeeToBeAddedIntoDb;
+    }
+    public List<Employee> findAllEmployees () {
+        return employeeRepository.findAll();
     }
 }
