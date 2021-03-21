@@ -6,14 +6,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.validation.constraints.Email;
+import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotEmpty;
-import java.time.Instant;
 
 @Data
 @Entity
@@ -28,4 +22,7 @@ public class Post {
     private String postName;
     @Nullable
     private String url;
+    @Nullable
+    @Lob
+    private String description;
 }
