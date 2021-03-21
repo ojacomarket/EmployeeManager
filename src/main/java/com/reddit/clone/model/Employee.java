@@ -1,5 +1,6 @@
 package com.reddit.clone.model;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -7,6 +8,7 @@ import java.io.Serializable;
 
 @Entity
 @Data
+@AllArgsConstructor
 public class Employee implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
