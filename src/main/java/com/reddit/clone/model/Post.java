@@ -20,8 +20,10 @@ public class Post {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long postId;
-    @NotBlank(message = "Name cannot be empty")
+    @NotBlank(message = "Name is required")
     private String postName;
-    
+    @NotBlank(message = "Password is required")
+    private String password;
+
 
 }
