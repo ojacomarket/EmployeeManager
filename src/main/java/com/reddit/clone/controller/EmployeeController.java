@@ -17,6 +17,6 @@ public class EmployeeController {
     private final EmployeeService employeeService;
     @GetMapping
     public ResponseEntity<List<Employee>> getAllEmployees() {
-        
+        List<Employee> existingEmployees = employeeService.findAllEmployees();
     }
 }
