@@ -1,5 +1,6 @@
 package com.reddit.clone.service;
 
+import com.reddit.clone.exception.UserNotFoundException;
 import com.reddit.clone.model.Employee;
 import com.reddit.clone.repository.EmployeeRepository;
 import lombok.AllArgsConstructor;
@@ -26,7 +27,8 @@ public class EmployeeService {
     }
 
     public Employee findEmployeeById (Long idOfEmployee) {
-        return employeeRepository.findById(idOfEmployee).orElse(null);
+        return employeeRepository.findById(idOfEmployee)
+                .orElseThrow(() -> new UserNotFoundException("User with id of " + idOfEmployee + " has not found"));
     }
 
     public void deleteEmployee (Long idOfEmployee) {
