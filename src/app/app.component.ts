@@ -26,5 +26,6 @@ export class AppComponent implements OnInit{
   }
   public onOpenModal(employee: Employees, mode: string): void {
     const button = document.createElement('button');
+    button.type = 'button';
   }
 }
