@@ -11,7 +11,7 @@ import {EmployeeServiceService} from './employee-service.service';
   imports: [
     BrowserModule
   ],
-  providers: [EmployeeServiceService], //Or you Inject it here, BASICALLY you have two choices :)
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
