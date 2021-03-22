@@ -5,7 +5,7 @@ import {Employees} from './employees';
 import {environment} from '../environments/environment';
 
 @Injectable({
-  providedIn: 'root' //You either Inject Service into application like this
+  providedIn: 'root'
 })
 export class EmployeeServiceService {
   private BACKEND_SERVER_URL = environment.LOCALHOST_BASE;
