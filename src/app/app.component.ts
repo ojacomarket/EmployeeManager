@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {Employees} from './employees';
+import {EmployeeServiceService} from './employee-service.service';
 
 @Component({
   selector: 'app-root',
@@ -8,4 +9,6 @@ import {Employees} from './employees';
 })
 export class AppComponent {
   employeesFromBackend: Employees[];
+  constructor(private employeeService: EmployeeServiceService) {
+  }
 }
