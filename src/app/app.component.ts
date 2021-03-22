@@ -25,7 +25,7 @@ export class AppComponent implements OnInit{
     this.getEmployeesFromService();
   }
   public onOpenModal(employee: Employees, mode: string): void {
-    const containerBlock = document.getElementById('mainContainer');
+    const containerBlock = document.getElementById('main-container');
     const button = document.createElement('button');
     button.type = 'button';
     button.style.display = 'none';
