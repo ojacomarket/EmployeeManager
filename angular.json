@@ -120,5 +120,8 @@
       }
     }
   },
-  "defaultProject": "employeemanagerapp"
+  "defaultProject": "employeemanagerapp",
+  "cli": {
+    "analytics": false
+  }
 }
