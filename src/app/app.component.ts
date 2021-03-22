@@ -29,5 +29,8 @@ export class AppComponent implements OnInit{
     button.type = 'button';
     button.style.display = 'none';
     button.setAttribute('data-toggle', 'modal');
+    if (mode === 'add') {
+      button.setAttribute('data-target', '#addEmployeeModal');
+    }
   }
 }
