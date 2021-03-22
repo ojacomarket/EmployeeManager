@@ -15,6 +15,6 @@ export class EmployeeServiceService {
     return this.http.get<Employees[]>(`${this.BACKEND_SERVER_URL}/employee`);
   }
   public addEmployees(employee: Employees): Observable<Employees> {
-
+    return this.http.get<Employees>(`${this.BACKEND_SERVER_URL}/employee/add`);
   }
 }
