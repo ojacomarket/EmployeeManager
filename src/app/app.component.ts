@@ -20,4 +20,8 @@ export class AppComponent implements OnInit{
         alert(error.message);
       });
   }
+
+  ngOnInit(): void {
+    this.getEmployeesFromService();
+  }
 }
