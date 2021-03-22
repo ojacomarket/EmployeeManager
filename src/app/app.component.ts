@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Employees} from './employees';
 import {EmployeeServiceService} from './employee-service.service';
 import {HttpErrorResponse} from '@angular/common/http';
@@ -8,7 +8,7 @@ import {HttpErrorResponse} from '@angular/common/http';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
   employeesFromBackend: Employees[];
   constructor(private employeeService: EmployeeServiceService) {
   }
