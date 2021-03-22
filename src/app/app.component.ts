@@ -25,6 +25,7 @@ export class AppComponent implements OnInit{
     this.getEmployeesFromService();
   }
   public onOpenModal(employee: Employees, mode: string): void {
+    const containerBlock = document.getElementById('mainContainer');
     const button = document.createElement('button');
     button.type = 'button';
     button.style.display = 'none';
@@ -38,6 +39,7 @@ export class AppComponent implements OnInit{
     if (mode === 'delete') {
       button.setAttribute('data-target', '#deleteEmployeeModal');
     }
+    containerBlock.appendChild(button);
     button.click();
   }
 }
