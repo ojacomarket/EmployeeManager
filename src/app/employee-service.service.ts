@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import {HttpClient} from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -6,5 +7,5 @@ import { Injectable } from '@angular/core';
 export class EmployeeServiceService {
   private const BACKEND_SERVER_URL = '';
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 }
