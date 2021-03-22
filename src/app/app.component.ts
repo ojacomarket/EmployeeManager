@@ -11,4 +11,6 @@ export class AppComponent {
   employeesFromBackend: Employees[];
   constructor(private employeeService: EmployeeServiceService) {
   }
+  public getEmployeesFromService(): void {
+  }
 }
