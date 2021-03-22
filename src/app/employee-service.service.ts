@@ -20,4 +20,7 @@ export class EmployeeServiceService {
   public updateEmployees(employee: Employees): Observable<Employees> {
     return this.http.put<Employees>(`${this.BACKEND_SERVER_URL}/employee/update`, employee);
   }
+  public deleteEmployees(employeeId: number): Observable<void> {
+    return this.http.delete<void>(`${this.BACKEND_SERVER_URL}/employee/delete/${employeeId}`);
+  }
 }
