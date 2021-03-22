@@ -2,12 +2,13 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {Employees} from './employees';
+import {environment} from '../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class EmployeeServiceService {
-  private BACKEND_SERVER_URL = '';
+  private BACKEND_SERVER_URL = environment.LOCALHOST_BASE;
 
   constructor(private http: HttpClient) { }
 
