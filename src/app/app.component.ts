@@ -25,6 +25,6 @@ export class AppComponent implements OnInit{
     this.getEmployeesFromService();
   }
   public onOpenModal(employee: Employees, mode: string): void {
-    
+    const button = document.createElement('button');
   }
 }
