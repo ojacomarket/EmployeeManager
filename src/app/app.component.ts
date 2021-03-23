@@ -10,6 +10,7 @@ import {NgForm} from '@angular/forms';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit{
+  toBeEditedEmployee: Employees;
   employeesFromBackend: Employees[];
   constructor(private employeeService: EmployeeServiceService) {
   }
@@ -56,6 +57,7 @@ export class AppComponent implements OnInit{
       button.setAttribute('data-target', '#addEmployeeModal');
     }
     if (mode === 'edit') {
+      
       button.setAttribute('data-target', '#updateEmployeeModal');
     }
     if (mode === 'delete') {
