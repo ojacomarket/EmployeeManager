@@ -81,6 +81,6 @@ export class AppComponent implements OnInit{
     button.click();
   }
   public searchEmployees(searchKey: string): void {
-
+    const resultOfSearch: Employees[] = [];
   }
 }
