@@ -9,16 +9,18 @@ import {NgForm} from '@angular/forms';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit{
+export class AppComponent implements OnInit {
   toBeDeletedEmployee: Employees;
   toBeEditedEmployee: Employees;
   employeesFromBackend: Employees[];
+
   constructor(private employeeService: EmployeeServiceService) {
   }
+
   public getEmployeesFromService(): void {
     this.employeeService.getEmployees().subscribe((listOfEmployeesAsHttpResponse: Employees[]) => {
-      this.employeesFromBackend = listOfEmployeesAsHttpResponse;
-    },
+        this.employeesFromBackend = listOfEmployeesAsHttpResponse;
+      },
       (error: HttpErrorResponse) => {
         alert(error.message);
       });
@@ -27,6 +29,7 @@ export class AppComponent implements OnInit{
   ngOnInit(): void {
     this.getEmployeesFromService();
   }
+
   public onEmployeeAddition(incomingFormFromHTML: NgForm): void {
     this.employeeService.addEmployees(incomingFormFromHTML.value).subscribe(
       (responseFromService: Employees) => {
@@ -40,6 +43,7 @@ export class AppComponent implements OnInit{
       });
     document.getElementById('add-employee-form').click();
   }
+
   public onEmployeeUpdate(existingEmployee: Employees): void {
     this.employeeService.updateEmployees(existingEmployee).subscribe(
       (responseFromService: Employees) => {
@@ -50,6 +54,7 @@ export class AppComponent implements OnInit{
         alert(error.message);
       });
   }
+
   public onEmployeeDelete(existingEmployeeId: number): void {
     this.employeeService.deleteEmployees(existingEmployeeId).subscribe(
       (responseFromService: void) => {
@@ -60,6 +65,7 @@ export class AppComponent implements OnInit{
         alert(error.message);
       });
   }
+
   onOpenModal(employee: Employees, mode: string): void {
     const containerBlock = document.getElementById('main-container');
     const button = document.createElement('button');
@@ -80,7 +86,18 @@ export class AppComponent implements OnInit{
     containerBlock.appendChild(button);
     button.click();
   }
+
   public searchEmployees(searchKey: string): void {
     const resultOfSearch: Employees[] = [];
+    for (const employee of this.employeesFromBackend) {
+      if (employee.name.toLowerCase().indexOf(searchKey.toLowerCase()) !== -1 ||
+        employee.jobTitle.toLowerCase().indexOf(searchKey.toLowerCase()) !== -1 ||
+        employee.phone.toLowerCase().indexOf(searchKey.toLowerCase()) !== -1 ||
+        employee.email.toLowerCase().indexOf(searchKey.toLowerCase()) !== -1) {
+        resultOfSearch.push(employee);
+      } else if (!searchKey || resultOfSearch.length === 0) {
+        this.getEmployeesFromService();
+      }
+    }
   }
 }
