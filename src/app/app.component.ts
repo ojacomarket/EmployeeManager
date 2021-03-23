@@ -28,8 +28,11 @@ export class AppComponent implements OnInit{
   public onEmployeeAddition(incomingFormFromHTML: NgForm): void {
     this.employeeService.addEmployees(incomingFormFromHTML.value).subscribe(
       (responseFromService: Employees) => {
-        console.log(responseFromService)
-      }
+        console.log(responseFromService);
+      },
+      (error: HttpErrorResponse) => {
+        alert(error.message);
+      });
 
   }
   onOpenModal(employee: Employees, mode: string): void {
