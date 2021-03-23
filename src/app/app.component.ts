@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Employees} from './employees';
 import {EmployeeServiceService} from './employee-service.service';
 import {HttpErrorResponse} from '@angular/common/http';
+import {NgForm} from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -24,7 +25,9 @@ export class AppComponent implements OnInit{
   ngOnInit(): void {
     this.getEmployeesFromService();
   }
-  public onOpenModal(employee: Employees, mode: string): void {
+  public onEmployeeAddition(addForm: NgForm): void {
+  }
+  onOpenModal(employee: Employees, mode: string): void {
     const containerBlock = document.getElementById('main-container');
     const button = document.createElement('button');
     button.type = 'button';
