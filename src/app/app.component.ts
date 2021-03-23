@@ -66,6 +66,23 @@ export class AppComponent implements OnInit {
       });
   }
 
+  searchEmployees(searchKey: string): void {
+    console.log(searchKey);
+    const resultOfSearch: Employees[] = [];
+    for (const employee of this.employeesFromBackend) {
+      if (employee.name.toLowerCase().indexOf(searchKey.toLowerCase()) !== -1 ||
+        employee.jobTitle.toLowerCase().indexOf(searchKey.toLowerCase()) !== -1 ||
+        employee.phone.toLowerCase().indexOf(searchKey.toLowerCase()) !== -1 ||
+        employee.email.toLowerCase().indexOf(searchKey.toLowerCase()) !== -1) {
+        resultOfSearch.push(employee);
+      }
+    }
+    this.employeesFromBackend = resultOfSearch;
+    if (resultOfSearch.length === 0 || !searchKey) {
+      this.getEmployeesFromService();
+    }
+  }
+
   onOpenModal(employee: Employees, mode: string): void {
     const containerBlock = document.getElementById('main-container');
     const button = document.createElement('button');
@@ -85,19 +102,5 @@ export class AppComponent implements OnInit {
     }
     containerBlock.appendChild(button);
     button.click();
-  }
-
-  public searchEmployees(searchKey: string): void {
-    const resultOfSearch: Employees[] = [];
-    for (const employee of this.employeesFromBackend) {
-      if (employee.name.toLowerCase().indexOf(searchKey.toLowerCase()) !== -1 ||
-        employee.jobTitle.toLowerCase().indexOf(searchKey.toLowerCase()) !== -1 ||
-        employee.phone.toLowerCase().indexOf(searchKey.toLowerCase()) !== -1 ||
-        employee.email.toLowerCase().indexOf(searchKey.toLowerCase()) !== -1) {
-        resultOfSearch.push(employee);
-      } else if (!searchKey || resultOfSearch.length === 0) {
-        this.getEmployeesFromService();
-      }
-    }
   }
 }
