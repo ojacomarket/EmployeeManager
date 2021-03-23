@@ -34,7 +34,7 @@ export class AppComponent implements OnInit{
       (error: HttpErrorResponse) => {
         alert(error.message);
       });
-
+    document.getElementById('add-employee-form').click();
   }
   onOpenModal(employee: Employees, mode: string): void {
     const containerBlock = document.getElementById('main-container');
