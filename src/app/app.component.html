@@ -159,4 +159,10 @@
     </div>
   </div>
 </div>
-
+<!-- Notification if no employees were found -->
+<div *ngIf="employeesFromBackend?.length == 0" class="col-lg-12 col-md-12 col-xl-12">
+  <div class="alert alert-info" role="alert">
+    <h4 class="alert-heading">NO EMPLOYEES!</h4>
+    <p>No Employees were found.</p>
+  </div>
+</div>
