@@ -29,6 +29,7 @@ export class AppComponent implements OnInit{
     this.employeeService.addEmployees(incomingFormFromHTML.value).subscribe(
       (responseFromService: Employees) => {
         console.log(responseFromService);
+        this.getEmployeesFromService();
       },
       (error: HttpErrorResponse) => {
         alert(error.message);
