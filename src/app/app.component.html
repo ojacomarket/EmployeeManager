@@ -8,7 +8,7 @@
   <div class="collapse navbar-collapse" id="navbarColor02">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a type="button" class="nav-link" (click)="onOpenModal(null, 'add')">Add Employee <span class="sr-only">(current)</span></a>
+        <a type="button" class="nav-link" (click)="onOpenModal(null, 'add')">Add Employee<span class="sr-only">(current)</span></a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
@@ -99,7 +99,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="updateEmployeeModalLabel">Edit Employee</h5>
+        <h5 class="modal-title" id="updateEmployeeModalLabel">Edit Employee {{toBeEditedEmployee?.name}}</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -144,7 +144,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="deleteModelLabel">Delete Employee</h5>
+        <h5 class="modal-title" id="deleteModelLabel">Delete Employee {{toBeDeletedEmployee?.name}}</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
