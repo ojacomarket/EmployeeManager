@@ -25,7 +25,7 @@ export class AppComponent implements OnInit{
   ngOnInit(): void {
     this.getEmployeesFromService();
   }
-  public onEmployeeAddition(addForm: NgForm): void {
+  public onEmployeeAddition(incomingFormFromHTML: NgForm): void {
   }
   onOpenModal(employee: Employees, mode: string): void {
     const containerBlock = document.getElementById('main-container');
