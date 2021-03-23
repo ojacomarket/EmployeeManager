@@ -49,6 +49,16 @@ export class AppComponent implements OnInit{
         alert(error.message);
       });
   }
+  public onEmployeeDelete(existingEmployeeId: number): void {
+    this.employeeService.deleteEmployees(existingEmployeeId).subscribe(
+      (responseFromService: void) => {
+        console.log(responseFromService);
+        this.getEmployeesFromService();
+      },
+      (error: HttpErrorResponse) => {
+        alert(error.message);
+      });
+  }
   onOpenModal(employee: Employees, mode: string): void {
     const containerBlock = document.getElementById('main-container');
     const button = document.createElement('button');
