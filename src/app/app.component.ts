@@ -80,4 +80,7 @@ export class AppComponent implements OnInit{
     containerBlock.appendChild(button);
     button.click();
   }
+  public searchEmployees(searchKey: string): void {
+
+  }
 }
