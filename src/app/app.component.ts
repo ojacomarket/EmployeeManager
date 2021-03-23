@@ -36,6 +36,16 @@ export class AppComponent implements OnInit{
       });
     document.getElementById('add-employee-form').click();
   }
+  public onEmployeeUpdate(existingEmployee: Employees): void {
+    this.employeeService.updateEmployees(existingEmployee).subscribe(
+      (responseFromService: Employees) => {
+        console.log(responseFromService);
+        this.getEmployeesFromService();
+      },
+      (error: HttpErrorResponse) => {
+        alert(error.message);
+      });
+  }
   onOpenModal(employee: Employees, mode: string): void {
     const containerBlock = document.getElementById('main-container');
     const button = document.createElement('button');
