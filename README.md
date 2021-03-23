@@ -1,6 +1,6 @@
 # EmployeeManager:green_book:
 
-### Technical description:
+### :hammer:Technical description:
 **Small and simple application, that includes usage of:**
 - Spring Boot
 - Angular 11
