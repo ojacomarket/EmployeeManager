@@ -28,6 +28,6 @@
 ### :star:For enthusiasts
 Check this application out in a [Swagger](http://localhost:8080/swagger-ui/index.html)
 ### :key:Contribution
-- Youtube channel [GetArrays](https://www.youtube.com/channel/UC3qeVkfxM7xeFt_AtZwmYhw)
+- Youtube channel [Get Arrays](https://www.youtube.com/channel/UC3qeVkfxM7xeFt_AtZwmYhw)
 - Youtube channel [The Net Ninja](https://www.youtube.com/channel/UCW5YeuERMmlnqo4oq8vwUpg)
 - Youtube channel [Amigoscode](https://www.youtube.com/user/djdjalas)
