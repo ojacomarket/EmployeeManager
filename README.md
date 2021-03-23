@@ -24,4 +24,4 @@
 - Start server by running ***CloneApplication*** class
 - Change branch to ***frontend***
 - Start application by typing into IDE embedded Terminal ***ng serve --open***
-- As application opened, enjoy it:pizza:
+- As application is opened, enjoy it:pizza:
