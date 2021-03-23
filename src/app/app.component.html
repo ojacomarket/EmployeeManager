@@ -111,8 +111,8 @@
             <input ngModel="{{toBeEditedEmployee?.name}}" type="text" name="name" class="form-control" id="name" aria-describedby="emailHelp"
                    placeholder="Name">
           </div>
-          <input type="hidden" name="id" class="form-control" id="id" placeholder="Email">
-          <input type="hidden" name="userCode" class="form-control" id="userCode" placeholder="Email">
+          <input ngModel="{{toBeEditedEmployee?.id}}" type="hidden" name="id" class="form-control" id="id" placeholder="Email">
+          <input ngModel="{{toBeEditedEmployee?.employeeCode}}" type="hidden" name="userCode" class="form-control" id="userCode" placeholder="Email">
           <div class="form-group">
             <label for="email">Email Address</label>
             <input ngModel="{{toBeEditedEmployee?.email}}" type="email" name="email" class="form-control" id="email" placeholder="Email">
