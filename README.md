@@ -5,7 +5,7 @@
 - Spring Boot
 - Angular 11
 - MySQL 8
-### :clapper:What it does?
+### :dart:What it does?
 - Ability to see current employees
 - Add new employee on demand
 - Delete existing employee if one is left
