@@ -10,6 +10,7 @@ import {NgForm} from '@angular/forms';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit{
+  toBeDeletedEmployee: Employees;
   toBeEditedEmployee: Employees;
   employeesFromBackend: Employees[];
   constructor(private employeeService: EmployeeServiceService) {
