@@ -21,7 +21,12 @@
 - [Clone it](https://github.com/ojacomarket/EmployeeManager.git)
 - Open it in IDE of interest
 - Change branch to ***backend***
+- Check all dependecies, then Build project
+- Insure, that you have ***MySQL*** server up and running
+- Create database called **employeemanager*
 - Start server by running ***CloneApplication*** class
+- Goto ***config*** Java package and find link to Swagger (check ***For enthusiasts*** section)
+- Inside swagger make as many as you want **POST** requests to create new employee
 - Change branch to ***frontend***
 - Start application by typing into IDE embedded Terminal ***ng serve --open***
 - As application is opened, enjoy it:pizza:
