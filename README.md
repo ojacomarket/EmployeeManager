@@ -23,7 +23,7 @@
 - Change branch to ***backend***
 - Check all dependecies, then Build project
 - Insure, that you have ***MySQL*** server up and running
-- Create database called **employeemanager*
+- Create database called **employeemanager**
 - Start server by running ***CloneApplication*** class
 - Goto ***config*** Java package and find link to Swagger (check ***For enthusiasts*** section)
 - Inside swagger make as many as you want **POST** requests to create new employee
